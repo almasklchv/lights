@@ -27,6 +27,10 @@ fakeMainMenuBtn.addEventListener('click', () => {
                 fakeGameplay.pause()
                 body.classList.toggle('fake-background');
                 body.classList.toggle('real-background');
+                const music = new Audio('./assets/audio/pacman_eatfruit.wav');
+                music.volume = 0.05;
+                music.loop = true
+                music.play()
             }
             window.removeEventListener('keydown', mainEvent)
         }, 1);
